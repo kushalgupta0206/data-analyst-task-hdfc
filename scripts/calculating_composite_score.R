@@ -1,14 +1,12 @@
 
-#load the required libraries
-library(dplyr)
-library(tidyr)
-library(stringr)
+#load tidyverse
+library(tidyverse)
 
 #load all the tables
-player_season_wy <- read.csv("../data/wyscout_2024_mls.csv")
-player_match_runs_sc <- read.csv("../data/skillcorner_gi_2024_mls.csv") 
-player_match_physical_sc <- read.csv("../data/skillcorner_physical_2024_mls.csv", sep = ";")
-player_id_map <- read.csv("../data/player_id_map.csv")
+player_season_wy <- read.csv("./data/wyscout_2024_mls.csv")
+player_match_runs_sc <- read.csv("./data/skillcorner_gi_2024_mls.csv") 
+player_match_physical_sc <- read.csv("./data/skillcorner_physical_2024_mls.csv", sep = ";")
+player_id_map <- read.csv("./data/player_id_map.csv")
 
 #define a center forward and calculate the number of matches and minutes played in the season
 player_season_data_sc <- player_match_physical_sc %>% 
